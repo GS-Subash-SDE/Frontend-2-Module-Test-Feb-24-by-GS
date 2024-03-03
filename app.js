@@ -91,7 +91,9 @@ forms.addEventListener("submit", (e) => {
   const obj = e.currentTarget;
   if (emailFlag && passFlag) {
     const confimStatus = confirm("Are you sure you want to proceed?");
-
+    emailFlag = false;
+    passFlag = false;
+    
     if (confimStatus) {
       alert("Successful signup!");
     } else {
@@ -101,6 +103,6 @@ forms.addEventListener("submit", (e) => {
     if (para) {
       para.remove();
     }
-    obj.reset(); 
+    obj.reset();
   }
 });
